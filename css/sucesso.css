@@ -1,0 +1,388 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background:linear-gradient(
+        135deg,
+        #121958 0%,
+        #4f4cb7 50%,
+        #9a69e9 100%
+    );
+}
+
+/* NAVBAR */
+
+.menu{
+    display:flex;
+    gap:80px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#121958;
+    font-size:18px;
+}
+
+/* TITULO */
+
+.titulo{
+    text-align:center;
+
+    color:white;
+
+    font-size:30px;
+
+    margin:20px 0;
+}
+
+/* CARD */
+
+.card{
+    width:70%;
+
+    max-width:1400px;
+
+    height:490px;
+
+    margin:auto;
+
+    background:rgba(43,31,125,.9);
+
+    border-radius:40px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* ROBO */
+
+.robo{
+    position:absolute;
+
+    left:-20px;
+    bottom:0;
+}
+
+.robo img{
+    width:350px;
+}
+
+/* TEXTO */
+
+.conteudo{
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+}
+
+.conteudo h2{
+    color:white;
+
+    font-size:40px;
+
+    max-width:900px;
+
+    line-height:1.2;
+}
+
+.conteudo span{
+    color:#9df26f;
+}
+
+/* BOTOES */
+
+.botoes{
+    margin-top:80px;
+
+    display:flex;
+
+    gap:50px;
+}
+
+.btn-denuncia,
+.btn-inicio{
+
+    text-decoration:none;
+
+    padding:25px 50px;
+
+    border-radius:20px;
+
+    font-size:20px;
+
+    transition:.3s;
+
+    min-width:290px;
+
+    text-align:center;
+}
+
+/* BOTÃO BRANCO */
+
+.btn-denuncia{
+    background:white;
+    color:#000000;
+}
+
+/* HOVER VERDE */
+
+.btn-denuncia:hover{
+    background:#8469b6;
+    color:white;
+}
+
+/* BOTÃO VERDE */
+
+.btn-inicio{
+    background:#6ec04d;
+    color:white;
+}
+
+/* HOVER BRANCO */
+
+.btn-inicio:hover{
+    background:white;
+    color:black;
+}
+.titulo-sucesso{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:60px;
+
+    margin-top:20px;
+}
+
+.card{
+
+    width:60%;
+
+    max-width:1400px;
+
+    height:460px;
+
+    margin:20px auto;
+
+    background:rgba(43,31,125,.85);
+
+    border-radius:40px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.robo{
+
+    position:absolute;
+
+    left:-150px; /* aumente este valor */
+
+    bottom:20px;
+
+    width:680px;
+
+    z-index:9999;
+    
+    pointer-events:none;
+}
+
+.robo img{
+
+    width:320px;
+}
+.bolhas{
+
+     position:absolute;
+
+    right:-40px;
+    top:120px;
+
+    width:800px;
+
+    opacity:.15;
+
+    z-index:1;
+
+     pointer-events:none;
+}
+
+.texto-sucesso{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+}
+
+.texto-sucesso h2{
+
+    color:white;
+
+    font-size:60px;
+
+    line-height:1.2;
+
+    max-width:900px;
+}
+
+.texto-sucesso span{
+
+    color:#9ff56e;
+}
+
+.botoes-sucesso{
+
+    margin-top:80px;
+
+    display:flex;
+
+    gap:120px;
+}
+
+.btn-outra,
+.btn-inicio{
+
+    text-decoration:none;
+
+    min-width:320px;
+
+    text-align:center;
+
+    padding:22px 40px;
+
+    border-radius:20px;
+
+    font-size:24px;
+
+    transition:.3s;
+}
+
+/* BOTÃO FAZER OUTRA DENÚNCIA */
+
+.btn-outra{
+
+    background:white;
+
+    color:#6aa04f;
+}
+
+.btn-outra:hover{
+
+    background:#77c850;
+
+    color:white;
+}
+
+/* BOTÃO INÍCIO */
+
+.btn-inicio{
+
+    background:#77c850;
+
+    color:white;
+}
+
+.btn-inicio:hover{
+
+    background:white;
+
+    color:black;
+}
+/* AJUDA */
+
+.ajuda{
+    position:fixed;
+
+    top:20px;
+    right:20px;
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    background:#34c759;
+
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:28px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    transition:.3s;
+}
+
+.ajuda:hover{
+    transform:scale(1.1);
+}
+
+.ajuda-texto{
+
+    position:absolute;
+
+    top:60px;
+    right:0;
+
+    width:320px;
+
+    background:white;
+
+    color:#333;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    font-size:15px;
+
+    line-height:1.6;
+}
+
+.ajuda:hover .ajuda-texto{
+
+    opacity:1;
+
+    visibility:visible;
+}

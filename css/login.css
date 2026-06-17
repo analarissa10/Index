@@ -1,0 +1,365 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background:linear-gradient(
+        135deg,
+        #121958 0%,
+        #4f4cb7 50%,
+        #9a69e9 100%
+    );
+}
+
+.login-page{
+    padding:53px 63px;
+}
+
+.voltar{
+
+    position:absolute;
+
+    top:20px;
+    left:40px;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    transition:0.3s ease;
+}
+.voltar:hover{
+
+    color:#9df26f;
+
+    transform:translateX(-8px);
+}
+
+.titulo{
+    text-align:center;
+    color:white;
+    font-size:65px;
+    margin-bottom:10px;
+}
+
+.container-login{
+    width:1100px;
+
+    margin:30px auto;
+
+    display:flex;
+
+    gap:10px;
+
+    position:relative;
+}
+
+/* CARD ESQUERDO */
+
+.social-box{
+    width:320px;
+    height:410px;
+
+    background:rgba(35,23,123,.65);
+
+    border-radius:35px;
+
+    padding:35px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.social-box h2{
+    color:white;
+
+    text-align:center;
+
+    font-size:32px;
+
+    margin-bottom:60px;
+    
+    overflow:visible;
+}
+
+.social-icons{
+    display:flex;
+    gap:10px;
+}
+
+.icone-social img{
+    width:90px;
+    height:95px;
+
+    object-fit:cover;
+}
+.icone-social{
+
+    transition:0.3s ease;
+
+    cursor:pointer;
+}
+
+.icone-social:hover{
+
+    transform:translateY(-10px) scale(1.08);
+}
+
+.icone-social img{
+
+    transition:0.3s ease;
+}
+
+.icone-social:hover img{
+
+    filter:drop-shadow(
+        0 8px 15px
+        rgba(0,0,0,.25)
+    );
+}
+.icone-social:hover{
+
+    transform:
+    translateY(-12px)
+    scale(1.12)
+    rotate(-5deg);
+}
+
+/* CARD DIREITO */
+
+.form-box{
+     flex:1;
+
+    background:rgba(75, 51, 166, 0.75);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    position:relative;
+
+    z-index:2;
+
+    backdrop-filter:blur(3px);
+}
+
+.usuario{
+    position:absolute;
+
+    top:-127px;
+    right:-110px;
+}
+
+.usuario img{
+    width:330px;
+    height:330px;
+    object-fit:contain;
+}
+
+.form-box h2{
+    color:white;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+}
+
+.form-box form{
+    display:flex;
+    flex-direction:column;
+
+    gap:0px;
+
+    max-width:650px;
+    
+}
+
+.form-box input{
+
+    width:100%;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:18px;
+
+    margin-bottom:20px;
+
+    padding-left:25px;
+
+    font-size:24px;
+
+    background:rgba(255,255,255,.6);
+
+    color:white;
+}
+
+.form-box input::placeholder{
+
+    color:white;
+}
+
+.form-box button{
+    width:260px;
+
+    height: 70px;
+
+    margin:15px auto 0;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:20px;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.form-box button:hover{
+    background:#34c759;
+    color:white;
+}
+
+.erro{
+    color:#ffb3b3;
+    margin-bottom:15px;
+}
+/* IMAGENS DECORATIVAS */
+
+body{
+    position:relative;
+    overflow:hidden;
+}
+
+.bolhas{
+    position:absolute;
+
+    left:-50px;
+    top:118px;
+
+    width:700px;
+
+
+    z-index:0;
+}
+
+.onda{
+     position:fixed;
+
+    right:-150px;
+    bottom: -15px;
+
+    width:650px;
+
+    opacity:0.8;
+
+    z-index:0;
+
+    pointer-events:none;
+}
+
+/* GARANTE QUE O CONTEÚDO FIQUE NA FRENTE */
+
+.login-page,
+.container-login,
+.social-box,
+.form-box{
+    position:relative;
+    z-index:2;
+}
+/* AJUDA */
+
+.ajuda{
+    position:fixed;
+
+    top:20px;
+    right:20px;
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    color:rgb(0, 0, 0);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:28px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    transition:.3s;
+}
+
+.ajuda:hover{
+    transform:scale(1.1);
+    background:#34c759;
+
+    color:rgb(255, 255, 255);
+}
+
+.ajuda-texto{
+
+    position:absolute;
+
+    top:60px;
+    right:0;
+
+    width:320px;
+
+    background:white;
+
+    color:#333;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    font-size:15px;
+
+    line-height:1.6;
+}
+
+.ajuda:hover .ajuda-texto{
+
+    opacity:1;
+
+    visibility:visible;
+}

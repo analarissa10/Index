@@ -1,0 +1,367 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        90deg,
+        #121958,
+        #9a69e9
+    );
+
+    overflow:hidden;
+}
+
+/* VOLTAR */
+
+.voltar{
+
+    position:absolute;
+
+    top:20px;
+    left:40px;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    transition:0.3s ease;
+}
+.voltar:hover{
+
+    color:#9df26f;
+
+    transform:translateX(-8px);
+}
+
+/* TÍTULO */
+
+.titulo{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:65px;
+
+    margin-top:50px;
+}
+
+/* CONTAINER */
+
+.container{
+
+    width:1100px;
+
+    margin:30px auto;
+
+    display:flex;
+
+    gap:10px;
+
+    position:relative;
+}
+
+/* CARD ESQUERDO */
+
+.card-esquerdo{
+
+    width:320px;
+
+    height:410px;
+
+    background:rgba(35,23,123,.65);
+
+    border-radius:35px;
+
+    position:relative;
+
+    overflow:visible;
+}
+
+/* BOLHAS */
+
+.bolhas{
+
+    position:absolute;
+
+    width:700px;
+
+    left:-180px;
+
+    top:-40px;
+
+    z-index:-1;
+}
+
+/* TEXTO */
+
+.card-esquerdo h2{
+
+    color:white;
+
+    font-size:34px;
+
+    text-align:center;
+
+    margin-top:20px;
+
+    line-height:1.3;
+}
+
+/* BOTÃO ENTRAR */
+a{
+    text-decoration:none;
+}
+
+.btn-entrar{
+
+    width:260px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:white;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    display:block;
+
+    margin:60px auto;
+
+    box-shadow:
+    10px 10px 0 rgba(0,0,0,.2);
+}
+.btn-entrar:hover{
+
+    background:#34c759;
+
+    color:white;
+
+    transition:0.3s;
+}
+
+
+/* CARD DIREITO */
+
+.card-direito{
+
+     flex:1;
+
+    background:rgba(75, 51, 166, 0.75);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    position:relative;
+
+    z-index:2;
+
+    backdrop-filter:blur(3px);
+}
+
+/* AVATAR */
+
+.avatar{
+
+    position:absolute;
+
+    right:-110px;
+
+    top:-50px;
+
+    width:330px;
+}
+
+/* TÍTULO DIREITO */
+
+.card-direito h2{
+
+    color:white;
+
+    font-size:50px;
+
+    margin-bottom:20px;
+}
+
+/* INPUTS */
+
+input{
+
+    width:100%;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:18px;
+
+    margin-bottom:20px;
+
+    padding-left:25px;
+
+    font-size:24px;
+
+    background:rgba(255,255,255,.6);
+
+    color:white;
+}
+
+input::placeholder{
+
+    color:white;
+}
+
+/* LINK ANÔNIMO */
+
+.anonimo{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:15px;
+}
+
+/* BOTÃO CRIAR */
+
+.btn-criar{
+
+    display:block;
+
+    width:260px;
+
+    height:70px;
+
+    margin:15px auto;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:white;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+    10px 10px 0 rgba(0,0,0,.2);
+}
+.btn-criar:hover{
+
+    background:#8469b6;
+
+    color:white;
+
+    transition:0.3s;
+}
+
+/* ONDA */
+
+.onda{
+
+    position:absolute;
+
+    right:-275px;
+
+    bottom:-80px;
+
+    width:650px;
+
+    z-index:0; /* atrás do card */
+}
+/* AJUDA */
+
+.ajuda{
+    position:fixed;
+
+    top:20px;
+    right:20px;
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    color:rgb(0, 0, 0);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:28px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    transition:.3s;
+}
+
+.ajuda:hover{
+    transform:scale(1.1);
+    background:#34c759;
+
+    color:rgb(255, 255, 255);
+}
+
+.ajuda-texto{
+
+    position:absolute;
+
+    top:60px;
+    right:0;
+
+    width:320px;
+
+    background:white;
+
+    color:#333;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    font-size:15px;
+
+    line-height:1.6;
+}
+
+.ajuda:hover .ajuda-texto{
+
+    opacity:1;
+
+    visibility:visible;
+}
